@@ -27,7 +27,6 @@ function App() {
 		const products = await getData;
 
 		setProducts(products);
-		console.log(products);
 	};
 
 	const getSku = async (searchSku) => {
@@ -55,7 +54,7 @@ function App() {
 				});
 			}
 		} catch (error) {
-			console.log(error);
+			//console.log(error);
 		}
 	};
 
