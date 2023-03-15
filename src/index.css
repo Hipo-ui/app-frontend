@@ -1,0 +1,38 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    label {
+        @apply text-lg text-gray-600 font-normal;
+    }
+    
+    [type='text'], [type='number'],
+    [type='date'], [type='search'], select { 
+        @apply w-full bg-white border-blue-200 rounded text-gray-700 caret-blue-600 py-3
+        placeholder:text-gray-300 
+        focus:border-blue-500 focus:ring-4 focus:ring-blue-300/50;
+    }
+
+    [type='checkbox'], [type='radio'] {
+        @apply text-blue-500 border-gray-200 rounded
+        focus:border-blue-500 focus:ring-4 focus:ring-blue-300/50 
+        appearance-none checked:bg-blue-600
+        ml-2;
+    }
+
+    .button {
+        @apply bg-blue-600 rounded-md text-white font-medium py-2 hover:bg-blue-700;
+    }
+
+    .button-alt {
+        @apply w-full border border-blue-600 bg-white rounded-md py-2 text-blue-600 font-medium hover:bg-blue-100;
+    }
+   
+}
